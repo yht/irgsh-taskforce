@@ -1,0 +1,5 @@
+deb http://suro.ubaya.ac.id/ubuntu lucid main multiverse restricted universe
+deb http://suro.ubaya.ac.id/ubuntu lucid-updates main multiverse restricted universe
+deb http://suro.ubaya.ac.id/ubuntu lucid-security main multiverse restricted universe
+deb http://suro.ubaya.ac.id/ubuntu lucid-backports main multiverse restricted universe
+deb http://suro.ubaya.ac.id/ubuntu lucid-proposed main multiverse restricted universe
