@@ -1,8 +1,8 @@
 FROM ryht/ubuntu:lucid
 ADD sources.list /etc/apt/
-RUN apt-get update && apt-get upgrade && \
+RUN apt-get update && apt-get upgrade -y && \
   apt-get install -y --force-yes \
-    gpgv git-core
+    git-core
 RUN apt-get install -y --force-yes \
   python python-setuptools python-dev libpq-dev
 RUN easy_install pip && \
