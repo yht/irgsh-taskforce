@@ -6,5 +6,6 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN apt-get install -y --force-yes \
   python python-setuptools python-dev libpq-dev
 RUN easy_install pip && \
-  pip install virtualenv
+  pip install virtualenv \
+    django
 CMD ["/bin/bash"]
