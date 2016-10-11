@@ -2,9 +2,13 @@ FROM ryht/ubuntu:lucid
 ADD sources.list /etc/apt/
 RUN apt-get update && apt-get upgrade -y && \
   apt-get install -y --force-yes \
-    git-core
+    git-core && \
+ apt-get autoremove -y && \
+ apt-get clean \
 RUN apt-get install -y --force-yes \
-  python python-setuptools python-dev libpq-dev
+  python python-setuptools python-dev libpq-dev && \
+ apt-get autoremove -y && \
+ apt-get clean \
 RUN easy_install pip && \
   pip install virtualenv \
     django
