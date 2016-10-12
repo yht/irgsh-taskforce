@@ -4,7 +4,7 @@ RUN apt-get update && apt-get upgrade -y && \
   apt-get install -y --force-yes \
     git-core && \
  apt-get autoremove -y && \
- apt-get clean \
+ apt-get clean
 RUN apt-get install -y --force-yes \
   python python-setuptools python-dev libpq-dev && \
  apt-get autoremove -y && \
