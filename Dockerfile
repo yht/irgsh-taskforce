@@ -1,5 +1,4 @@
-FROM ryht/ubuntu:lucid
-ADD sources.list /etc/apt/
+FROM ryht/ubuntu:lucid-update
 RUN apt-get update && apt-get upgrade -y && \
   apt-get install -y --force-yes \
     git-core && \
