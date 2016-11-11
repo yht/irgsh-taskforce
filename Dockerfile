@@ -16,6 +16,6 @@ RUN easy_install pip && \
     simplejson && \
   pip install django-openid-auth \
     django-celery \
-    django-pickfield \
+#    django-pickfield \
     django-debug-toolbar
 CMD ["/bin/bash"]
