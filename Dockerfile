@@ -11,7 +11,7 @@ RUN easy_install pip && \
   pip install python-openid \
     python-debian \
     South \
-    celery \
+#    celery \
     poster \
     simplejson && \
   pip install django-openid-auth \
