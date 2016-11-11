@@ -22,10 +22,10 @@ RUN git clone git://github.com/yht/python-irgsh.git /opt/irgsh
 RUN git clone git://github.com/yht/irgsh-web.git /opt/irgsh-web
 RUN git clone git://github.com/yht/irgsh-node.git /opt/irgsh-node
 RUN git clone git://github.com/yht/irgsh-repo.git /opt/irgsh-repo
-RUN cd /opt/irgsh && \
-  ln -s ../python-irgsh/irgsh && \
-  ln -s ../irgsh-node/irgsh_node && \
-  ln -s ../irgsh-repo/irgsh_repo && \
+RUN cd /opt/irgsh-web && \
+  ln -s /opt/irgsh/irgsh && \
+  ln -s /opt/irgsh-node/irgsh_node && \
+  ln -s /opt/irgsh-repo/irgsh_repo && \
   python bootstrap.py && \
   ./bin/buildout
 CMD ["/bin/bash"]
