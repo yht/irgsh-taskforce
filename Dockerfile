@@ -11,9 +11,10 @@ RUN easy_install pip && \
   pip install python-openid \
     python-debian \
     South \
-#    celery \
     poster \
     simplejson && \
+  pip install -Iv \
+    https://github.com/celery/celery/archive/v2.2.7.tar.gz && \
   pip install django-openid-auth \
     django-celery \
 #    django-pickfield \
