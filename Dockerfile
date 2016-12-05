@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM ryht/irgsh:lucid-update
 RUN apt-get update && apt-get upgrade -y && \
  apt-get install -y --force-yes \
   git-core \
