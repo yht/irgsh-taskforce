@@ -15,16 +15,17 @@ RUN easy_install pip && \
     simplejson && \
   pip install -Iv \
     https://github.com/celery/celery/archive/v2.2.7.tar.gz && \
-  pip install django-openid-auth \
-    django-celery \
+  pip install django-openid-auth && \
+  pip install -Iv \
+    https://github.com/celery/django-celery/archive/v2.2.7.tar.gz && \
 #    django-pickfield \
     django-debug-toolbar
-RUN git clone git://github.com/yht/python-irgsh.git /opt/irgsh
-RUN git clone git://github.com/yht/irgsh-web.git /opt/irgsh-web
-RUN git clone git://github.com/yht/irgsh-node.git /opt/irgsh-node
-RUN git clone git://github.com/yht/irgsh-repo.git /opt/irgsh-repo
+RUN git clone git://github.com/blankon/python-irgsh.git /opt/python-irgsh
+RUN git clone git://github.com/blankon/irgsh-web.git /opt/irgsh-web
+RUN git clone git://github.com/blankon/irgsh-node.git /opt/irgsh-node
+RUN git clone git://github.com/blankon/irgsh-repo.git /opt/irgsh-repo
 RUN cd /opt/irgsh-web && \
-  ln -s /opt/irgsh/irgsh && \
+  ln -s /opt/python-irgsh/irgsh && \
   ln -s /opt/irgsh-node/irgsh_node && \
   ln -s /opt/irgsh-repo/irgsh_repo && \
   python bootstrap.py && \
