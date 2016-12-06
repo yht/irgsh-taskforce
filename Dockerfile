@@ -24,10 +24,6 @@ RUN git clone git://github.com/blankon/python-irgsh.git /opt/python-irgsh
 RUN git clone git://github.com/blankon/irgsh-web.git /opt/irgsh-web
 RUN git clone git://github.com/blankon/irgsh-node.git /opt/irgsh-node
 RUN git clone git://github.com/blankon/irgsh-repo.git /opt/irgsh-repo
-RUN cd /opt/irgsh-web && \
-  ln -s /opt/python-irgsh/irgsh && \
-  ln -s /opt/irgsh-node/irgsh_node && \
-  ln -s /opt/irgsh-repo/irgsh_repo && \
-  python bootstrap.py && \
-  ./bin/buildout
+COPY init.sh /root
+RUN sh /root/init.sh
 CMD ["/bin/bash"]
