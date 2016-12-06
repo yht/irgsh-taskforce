@@ -19,7 +19,7 @@ RUN easy_install pip && \
   pip install -Iv \
     https://github.com/celery/django-celery/archive/v2.2.7.tar.gz && \
 #    django-pickfield \
-    django-debug-toolbar
+  pip install django-debug-toolbar
 RUN git clone git://github.com/blankon/python-irgsh.git /opt/python-irgsh
 RUN git clone git://github.com/blankon/irgsh-web.git /opt/irgsh-web
 RUN git clone git://github.com/blankon/irgsh-node.git /opt/irgsh-node
